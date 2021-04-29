@@ -3,8 +3,8 @@ PROJ_NAME = car_seat_heater
 BUILD_DIR = Build
 
 # All Source code files
-SRC = main.c\
-src/initial_check.c
+SRC = seat_heating_application_main.c\
+src/initial_check.c src/temperature_set.c src/display_temperature.c src/send_data.c
 
 # All header file paths
 INC = -I inc
@@ -39,15 +39,15 @@ $(BUILD_DIR):
 # Create directory to store the built files
 	mkdir $(BUILD_DIR)
 
-#analysis: $(SRC)
+analysis: $(SRC)
 # Analyse the code using Cppcheck command line utility
-#	cppcheck --enable=all $^
+	cppcheck --enable=all $^
 
-#doc:
-# Build the code code documentation using Doxygen command line utility
-#	make -C documentation
+doc:
+# Build the code documentation using Doxygen command line utility
+	make -C documentation
 
 clean:
 # Remove all the build files and generated document files
 	rm -rf $(call FixPath,$(BUILD_DIR)/*)
-#	make -C documentation clean
+	make -C documentation clean

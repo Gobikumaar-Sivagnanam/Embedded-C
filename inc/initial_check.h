@@ -31,8 +31,8 @@
  */
 #define LED_ON PORTB |= (1<<PORTB0)        /// Setting PORT B0 to output 5V
 #define LED_OFF PORTB &= ~(1<<PORTB0)      /// Setting PORT B0 to output 0V
-#define SWITCH1 (!(PINB&(1<<PORTB1)))      /// Checking if PIN B1 is getting 0V
-#define SWITCH2 (!(PINB&(1<<PORTB2)))      /// Checking if PIN B2 is getting 0V
+#define SWITCH1 (!(PINB&(1<<PORTB3)))      /// Checking if PIN B1 is getting 0V
+#define SWITCH2 (!(PINB&(1<<PORTB4)))      /// Checking if PIN B2 is getting 0V
 
 /**
  * @brief Function to set the output ports and set them to provide 5V
@@ -45,5 +45,11 @@ void initialize_port_func1();
  * 
  */
 void intialize_interrupt_func1();
+
+/**
+ * @brief Function to call the initialize_port_func1() and intialize_interrupt_func1() functions
+ * 
+ */
+void initial_check();
 
 #endif  /// End of Definition 
