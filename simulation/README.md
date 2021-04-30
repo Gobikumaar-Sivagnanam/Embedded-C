@@ -67,3 +67,21 @@ ISR(USART_TX_vect)
 											/// Calling Interrupt Service Routine to clear the Interrupt Flag and Continue
 }
 ```
+
+### Main Function
+```C
+int main()
+{
+	sei();									/// Enabling global interruts
+	initial_check();						/// Function call to perform the inital check 
+	 
+	while(1)
+	{	
+		if(FLAG_1 == 1)						/// Checking if the intial Flag is set
+		{
+			initialize_ADC(0);				/// Starting the ADC to begin Conversion 
+		}
+	}
+	return 0;
+}
+```
