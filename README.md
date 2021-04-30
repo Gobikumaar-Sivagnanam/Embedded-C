@@ -20,7 +20,6 @@
 ### Pin Configuration 
 
 *   Using Atmega328 as the Microcontroller for implementing the Functionalities.
-
 *   Pins and the peripherals connected to it
 
 | PIN | Connected Peripheral |
