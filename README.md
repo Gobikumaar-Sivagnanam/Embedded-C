@@ -62,4 +62,3 @@
 | Expected Output | Simulation Output |
 |-----------------|-------------------|
 | LED Actuator- ON, PWM Output - 95%, Temperature - 33 C | <img src="/simulation/Operation_Two_Switch_Case4.JPG"> |
-
