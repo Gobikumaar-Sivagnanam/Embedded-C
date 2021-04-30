@@ -10,10 +10,10 @@
 ## Design Approach
 | Requirement | My Implementation Idea |
 |-------------|------------------------|
-| Considering the design specifications, it's clear that the application runs only based on the Passenger sitting on the seat and switching on the heater system | Connecting the sensors of the two condtions to the Microcontroller. Implemented this using a **PIN CHANGE Interrput** to check if there is any change in these two sensor readings as they drive rest of the functionalities, and setting a flag to TRUE if both are satisfied |    
-| Taking the ADC input Continuously as the user can opt to set the temperature at any time | Starting the ADC based on the set flag condition being TRUE. Then Handling rest of the features in **ADC Conversion Complete Interrupt** as if there is an ADC Conversion we need to perform the display and send data functions |
-| Displaying the Input ADC values as PWM to the Oscilloscope | Intiazling the  Fast PWM Generation in 10-bit mode using Timer 1 inside the **ADC Conversion Complete Interrupt** as we need to display continuously. Setting the PWM Duty based on the range of ADC value |  
-| Sending the Temperature set data serially | Implementing a USART protocol to serially transmit data based on the set temperature range done in the **ADC Conversion Complete Interrupt** as we need to display continuously based on user input | 
+| Considering the design specifications, it's clear that the application runs only based on the Passenger sitting on the seat and switching on the heater system | Connecting the sensors of the two condtions to the Microcontroller. Implemented this using a `PIN CHANGE Interrput` to check if there is any change in these two sensor readings as they drive rest of the functionalities, and setting a flag to TRUE if both are satisfied |    
+| Taking the ADC input Continuously as the user can opt to set the temperature at any time | Starting the ADC based on the set flag condition being TRUE. Then Handling rest of the features in `ADC Conversion Complete Interrupt` as if there is an ADC Conversion we need to perform the display and send data functions |
+| Displaying the Input ADC values as PWM to the Oscilloscope | Intiazling the  Fast PWM Generation in 10-bit mode using Timer 1 inside the `ADC Conversion Complete Interrupt` as we need to display continuously. Setting the PWM Duty based on the range of ADC value |  
+| Sending the Temperature set data serially | Implementing a USART protocol to serially transmit data based on the set temperature range done in the `ADC Conversion Complete Interrupt` as we need to display continuously based on user input | 
 
 ## Operation 
 
