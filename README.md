@@ -22,13 +22,13 @@
 *   Using Atmega328 as the Microcontroller for implementing the Functionalities.
 *   Pins and the peripherals connected to it
 
-| PIN | Connected Peripheral |
-|-----|----------------------|
-| PIN B0 | LED Actuator (Indicator LED) |
-| PIN B1 | Pulse Width Modulation Wave |
-| PIN B3 | Sensor for Passenger Seated |
-| PIN B4 | Switch for Heating System |
-| PIN C0 | Set Temperature using ADC |
+| PIN | Connected Peripheral | Direction of PIN |
+|-----|----------------------|------|
+| PIN B0 | LED Actuator (Indicator LED) | Output |
+| PIN B1 | Pulse Width Modulation Wave | Output |
+| PIN B3 | Sensor for Passenger Seated | Input |
+| PIN B4 | Switch for Heating System | Input |
+| PIN C0 | Set Temperature using ADC | Input |
 
 ### Simulation Circuit
 <img src="/simulation/Circuit_Configuration.JPG">
