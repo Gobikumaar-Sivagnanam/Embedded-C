@@ -31,7 +31,7 @@
 | PIN B4 | Switch for Heating System |
 | PIN C0 | Set Temperature using ADC |
 
-*   Simulation Circuit
+###   Simulation Circuit
 <img src="/simulation/Circuit_Configuration.JPG">
 
 ### Requirements Check 
