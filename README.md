@@ -11,6 +11,7 @@
 ### Pin Configuration 
 
 *   Pins and the peripherals connected to it
+
 | PIN | Connected Peripheral |
 |-----|----------------------|
 | PIN B0 | LED Actuator (Indicator LED) |
@@ -39,6 +40,7 @@
 ### Functionality Check
 
 *   Initial Conditions are True and ADC Input is in the range \[0 - 200\]
+
 | Expected Output | Simulation Output |
 |-----------------|-------------------|
 | LED Actuator- ON, PWM Output - 20%, Temperature - 20 C | <img src="/simulation/Operation_Two_Switch_Case1.JPG"> |
