@@ -39,11 +39,27 @@
 
 ### Functionality Check
 
-*   Initial Conditions are True and ADC Input is in the range \[0 - 200\]
+*   Initial Conditions are True and ADC Input is in the range \[1 - 200\]
 
 | Expected Output | Simulation Output |
 |-----------------|-------------------|
 | LED Actuator- ON, PWM Output - 20%, Temperature - 20 C | <img src="/simulation/Operation_Two_Switch_Case1.JPG"> |
+
+*   Initial Conditions are True and ADC Input is in the range \[210 - 500\]
+
+| Expected Output | Simulation Output |
+|-----------------|-------------------|
 | LED Actuator- ON, PWM Output - 40%, Temperature - 25 C | <img src="/simulation/Operation_Two_Switch_Case2.JPG"> |
+
+*   Initial Conditions are True and ADC Input is in the range \[510 - 700\]
+
+| Expected Output | Simulation Output |
+|-----------------|-------------------|
 | LED Actuator- ON, PWM Output - 70%, Temperature - 29 C | <img src="/simulation/Operation_Two_Switch_Case3.JPG"> |
+
+*   Initial Conditions are True and ADC Input is in the range \[710 - 1023\]
+
+| Expected Output | Simulation Output |
+|-----------------|-------------------|
 | LED Actuator- ON, PWM Output - 95%, Temperature - 33 C | <img src="/simulation/Operation_Two_Switch_Case4.JPG"> |
+
