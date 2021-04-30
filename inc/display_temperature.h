@@ -18,6 +18,15 @@
 #include <avr/interrupt.h>
 
 /**
+ * @brief Setting Macros for the output PWM compare value to obtain the desired PWM width
+ * 
+ */
+#define PWM_20_percent (205)
+#define PWM_40_percent (410)
+#define PWM_70_percent (842)
+#define PWM_95_percent (970)
+
+/**
  * @brief MACRO for calling the Output Compare Register for channel A (PIN B1)
  * 
  */

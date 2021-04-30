@@ -18,19 +18,11 @@
 #include <avr/interrupt.h>
 
 /**
- * @brief Setting MACROS for Starting ADC read and checking if ADC register is loaded 
+ * @brief Setting MACROS for Starting ADC read, checking if ADC register is loaded, Channel Select 
  */
 #define ADC_Start (ADCSRA |= (1<<ADSC))             /// Enabling the ADC Start Conversion bit in the control register
 #define ADC_Load (!(ADCSRA&(1<<ADIF)))              /// Checking if the Interrupt Flag is being cleared
-
-/**
- * @brief Setting Macros for the output PWM compare value to obtain the desired PWM width
- * 
- */
-#define PWM_20_percent (205)
-#define PWM_40_percent (410)
-#define PWM_70_percent (842)
-#define PWM_95_percent (970)
+#define ADC_Input_Channel 0                         /// Selecting 0 channel for PIN C0
 
 /**
  * @brief Function to initalize the ADC Registers with appropriate values

@@ -47,7 +47,7 @@ ISR(ADC_vect)								/// ISR for the ADC Conversion Completion
 
 		uint16_t buffer = 0;				/// To store the Temperature set Input (ADC Input)
 
-		initialize_ADC(0);					/// Starting the ADC Conversion
+		initialize_ADC(ADC_Input_Channel);	/// Starting the ADC Conversion
 		initialize_timer1_pwm();			/// Initializing Timer 1 in FAST PWM Mode in 10-Bit
 		
 		buffer = get_temperature();			/// Getting Value from ADC to store in buffer
@@ -84,14 +84,14 @@ ISR(USART_TX_vect)
 
 int main()
 {
-	sei();									/// Enabling global interruts
-	initial_check();						/// Function call to perform the inital check 
+	sei();										/// Enabling global interruts
+	initial_check();							/// Function call to perform the inital check 
 	 
 	while(1)
 	{	
-		if(FLAG_1 == 1)						/// Checking if the intial Flag is set
+		if(FLAG_1 == 1)							/// Checking if the intial Flag is set
 		{
-			initialize_ADC(0);				/// Starting the ADC to begin Conversion 
+			initialize_ADC(ADC_Input_Channel);	/// Starting the ADC to begin Conversion 
 		}
 	}
 	return 0;
