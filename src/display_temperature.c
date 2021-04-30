@@ -1,3 +1,13 @@
+/**
+ * @file display_temperature.c
+ * @author Gobikumaar Sivagnanam
+ * @brief Source code for the implementation of PWM Generation
+ * @version 0.1
+ * @date 2021-04-30
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "display_temperature.h"
 
 void initialize_timer1_pwm(){

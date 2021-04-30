@@ -1,3 +1,13 @@
+/**
+ * @file send_data.c
+ * @author Gobikumaar Sivagnanam
+ * @brief Source code to send data serially using USART with a set BAUD rate
+ * @version 0.1
+ * @date 2021-04-30
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "send_data.h"
 
 void USART_initialization(uint16_t baud_rate)

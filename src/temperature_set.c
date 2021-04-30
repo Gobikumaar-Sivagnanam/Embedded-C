@@ -1,3 +1,13 @@
+/**
+ * @file temperature_set.c
+ * @author Gobikumaar Sivagnanam
+ * @brief Source code for reading ADC value from a PIN
+ * @version 0.1
+ * @date 2021-04-30
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "temperature_set.h"
 
 void initialize_ADC(uint8_t channel)

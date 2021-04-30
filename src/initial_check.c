@@ -1,3 +1,13 @@
+/**
+ * @file initial_check.c
+ * @author Gobikumaar Sivagnanam
+ * @brief Source code for performing the checking of initial conditions
+ * @version 0.1
+ * @date 2021-04-30
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "initial_check.h"
 
 void intialize_interrupt_func1()
