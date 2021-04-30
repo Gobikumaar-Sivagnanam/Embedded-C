@@ -3,7 +3,14 @@
  * @author Gobikumaar Sivagnanam
  * @brief Main Function to check if the passenger is sitting, and switched on the heating system. If both is true then switching 
  * on the LED actuator. Then getting input data from an ADC from the user. Displaying this data using PWM technique. Also sending
- * the temperature set with serial communication using USART Protocol 
+ * the temperature set with serial communication using USART Protocol
+ * PIN B3 Takes the Passenger seating sensor input, PIN B4 takes the heating system ON input 
+ * The switches are in Pin Change Interrupt Mode on PIN B3 and PIN B4, and only when both the switches are ON the Application starts 
+ * in the PIN CHANGE interrupt service routine
+ * The ADC Interrupt for Conversion Complete is Enabled based on the two switches. The rest of the functionality is implemented in 
+ * this Interrpt Service Routine as we need output only if there is a an input from the ADC from PIN C0
+ * The PWM output is set based on the input ADC value on PIN B1
+ * The serial communication is also based on the ADC input and output is sent as temperature set
  * Handling the Functionalities using Interrupts to improve performace of the Microcontroller and avoid idling
  * @version 0.1
  * @date 2021-04-29
@@ -46,7 +53,7 @@ ISR(ADC_vect)								/// ISR for the ADC Conversion Completion
 		buffer = get_temperature();			/// Getting Value from ADC to store in buffer
 		if(buffer>=710 && buffer<=1023)		/// Logic to set PWM output based on the input value of ADC
 		{	
-			buffer = PWM_95_percent;					/// Setting PWM to 20%
+			buffer = PWM_95_percent;		/// Setting PWM to 20%
 			option = 4;						/// To select the option to Send Serial Data of '20 C'
 		}
 		if(buffer>=510 && buffer<=700)
