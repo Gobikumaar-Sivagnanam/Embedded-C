@@ -46,22 +46,22 @@ ISR(ADC_vect)								/// ISR for the ADC Conversion Completion
 		buffer = get_temperature();			/// Getting Value from ADC to store in buffer
 		if(buffer>=710 && buffer<=1023)		/// Logic to set PWM output based on the input value of ADC
 		{	
-			buffer = 970;					/// Setting PWM to 20%
+			buffer = PWM_95_percent;					/// Setting PWM to 20%
 			option = 4;						/// To select the option to Send Serial Data of '20 C'
 		}
 		if(buffer>=510 && buffer<=700)
 		{
-			buffer = 842;					/// Setting PWM to 40%
+			buffer = PWM_70_percent;		/// Setting PWM to 40%
 			option = 3;						/// To select the option to Send Serial Data of '25 C'
 		}
 		if(buffer>=210 && buffer<=500)
 		{
-			buffer = 410;					/// Setting PWM to 70%
+			buffer = PWM_40_percent;		/// Setting PWM to 70%
 			option = 2;						/// To select the option to Send Serial Data of '29 C'
 		}
 		if(buffer>=1 && buffer<=200)
 		{
-			buffer = 205;					/// Setting PWM to 95%
+			buffer = PWM_20_percent;		/// Setting PWM to 95%
 			option = 1;						/// To select the option to Send Serial Data of '33 C'
 		}
 		Output_pwm = buffer;				/// Setting the buffer to the PWM compare to obtain the PWM Wave

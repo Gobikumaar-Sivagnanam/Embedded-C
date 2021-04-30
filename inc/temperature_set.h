@@ -24,6 +24,15 @@
 #define ADC_Load (!(ADCSRA&(1<<ADIF)))              /// Checking if the Interrupt Flag is being cleared
 
 /**
+ * @brief Setting Macros for the output PWM compare value to obtain the desired PWM width
+ * 
+ */
+#define PWM_20_percent (205)
+#define PWM_40_percent (410)
+#define PWM_70_percent (842)
+#define PWM_95_percent (970)
+
+/**
  * @brief Function to initalize the ADC Registers with appropriate values
  * 
  * @param [in] ch To select the Channel
